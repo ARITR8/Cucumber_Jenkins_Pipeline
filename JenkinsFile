@@ -1,0 +1,39 @@
+pipeline {
+   agent any
+
+   stages {
+      stage('Hello') {
+         steps {
+            echo 'Hello World'
+         }
+      }
+  
+   
+   
+  
+      stage('Build') {
+         steps {
+            echo 'Build World'
+         }
+      }
+  
+   
+   
+   
+      stage('Test') {
+         steps {
+            ech0o 'Test World'
+         }
+      }
+   }
+      post {
+          
+          always {
+              emailext body 'xxx sadf', subject 'Jenkins Run summary', to 'aritradas75@gmail.com'
+          }
+      }
+      
+      
+ 
+   
+}
